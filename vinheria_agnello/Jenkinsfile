@@ -1,0 +1,37 @@
+pipeline {
+
+    agent any
+
+    stages {
+
+        stage('Checkout') {
+            steps {
+                echo 'Obtendo código do Git'
+            }
+        }
+
+        stage('Build') {
+            steps {
+                echo 'Compilando microsserviços'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                echo 'Executando testes'
+            }
+        }
+
+        stage('Package') {
+            steps {
+                echo 'Gerando artefatos'
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                echo 'Publicando ambiente'
+            }
+        }
+    }
+}
