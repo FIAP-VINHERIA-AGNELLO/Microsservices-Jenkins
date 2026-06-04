@@ -1,9 +1,7 @@
 pipeline {
 
     agent any
-
     stages {
-
         stage('Checkout') {
             steps {
                 echo 'Obtendo código do Git'
@@ -30,7 +28,7 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                echo 'Publicando ambiente'
+                echo 'Deploy da Vinheria'
             }
         }
     }

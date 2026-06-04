@@ -2,6 +2,7 @@ package com.agnello.catalogue.controller;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.client.RestTemplate;
 
 import com.agnello.catalogue.services.JwtValidatorService;
 
@@ -44,4 +45,17 @@ public class CatalogController {
                 "Chardonnay"
         );
     }
+    
+    @GetMapping("/test-auth")
+    public String testAuth() {
+
+        RestTemplate restTemplate = new RestTemplate();
+
+        return restTemplate.getForObject(
+                "http://auth-service:8080/auth",
+                String.class
+        );
+    }
+    
+    
 }

@@ -1,13 +1,13 @@
 services:
 
   auth-service:
-    build: ./auth-service
+    build: ./auth
     container_name: auth-service
     ports:
       - "8080:8080"
 
   catalog-service:
-    build: ./catalogue-service
+    build: ./catalogue
     container_name: catalog-service
     ports:
       - "8081:8080"

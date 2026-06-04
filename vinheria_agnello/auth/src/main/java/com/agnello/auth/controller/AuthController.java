@@ -1,11 +1,11 @@
 package com.agnello.auth.controller;
 
+import java.util.Map;
+
 import org.springframework.web.bind.annotation.*;
 
 import com.agnello.auth.entities.LoginRequest;
 import com.agnello.auth.services.JwtService;
-
-import java.util.Map;
 
 @RestController
 @RequestMapping("/auth")
